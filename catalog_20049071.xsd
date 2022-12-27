@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+targetNamespace="http://www.coursework.com"  
+xmlns:cw="http://www.coursework.com"  
+elementFormDefault="qualified">
+<!-- global variable definations -->
+  <xs:element name="cost" type="xs:decimal"></xs:element>
+  <xs:element name="title" type="xs:string"></xs:element>
+  <xs:element name="stock_amount" type="xs:positiveInteger"></xs:element>
+  <xs:element name="no_of_users" type="xs:positiveInteger"></xs:element>
+  <xs:element name="rating">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1"></xs:minInclusive>
+        <xs:maxInclusive value="5"></xs:maxInclusive>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!-- root element -->
+  <xs:element name="store">
+    <xs:complexType>  
+      <xs:sequence>
+        <!-- placeholder element for logo -->
+        <xs:element name="logo" />
+        <xs:element name="store_info">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- elements holding the store information -->
+              <xs:element name="store_name" type="xs:string"></xs:element>
+              <xs:element name="address" type="xs:string"></xs:element>
+              <xs:element name="address2" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+              <xs:element name="contact">
+                <xs:complexType>
+                  <xs:sequence>
+                    <!-- Adding validation to telephone to contain exactly 7 numeric digits -->
+                    <xs:element name="telephone" maxOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:pattern value="[0-9]{7}"></xs:pattern>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="mobile" minOccurs="0" maxOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:pattern value="[0-9]{10}"></xs:pattern>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <!-- Adding validation to email to contain @gmail at the end -->
+                    <xs:element name="email" minOccurs="0" maxOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value=".*@gmail.com"></xs:pattern>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="regional_code" type="xs:string" use="optional"></xs:attribute>
+                  <xs:attribute name="country_code" type="xs:string" use="optional"></xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="online_resource" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="resource_type" use="required">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="website"></xs:enumeration>
+                            <xs:enumeration value="social_media"></xs:enumeration>
+                          </xs:restriction>
+                       </xs:simpleType>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <!-- Elements containing the gift card information -->
+        <xs:element name="items">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gift_cards" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gift_card" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="display_contents">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element ref="cw:title"></xs:element>
+                                <xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+                                <xs:element name="credit_amount" type="xs:positiveInteger"></xs:element>
+                                <xs:element ref="cw:stock_amount"></xs:element>
+                                <xs:element ref="cw:no_of_users" minOccurs="0" maxOccurs="1"></xs:element>
+                                <xs:element ref="cw:rating" minOccurs="0" maxOccurs="1"></xs:element>
+                                <xs:element name="delivery_method">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="home delivery"></xs:enumeration>
+                                      <xs:enumeration value="online delivery"></xs:enumeration>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="refundable_status">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="refundable"></xs:enumeration>
+                                      <xs:enumeration value="non-refundable"></xs:enumeration>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element ref="cw:cost"></xs:element>
+                                <xs:element name="add_to_cart"></xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <!-- Defining the attributes for the gift card -->
+                        <xs:attribute name="card_type" use="required">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="physical"></xs:enumeration>
+                              <xs:enumeration value="digital"></xs:enumeration>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="gift_card_id" type="xs:ID" use="required"></xs:attribute>
+                        <xs:attribute name="access" use="optional">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="international"></xs:enumeration>
+                              <xs:enumeration value="regional"></xs:enumeration>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="service_provider" use="optional">
+                          <xs:simpleType>
+                            <!-- Adding validations to the card type attributes -->
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="visa"></xs:enumeration>
+                              <xs:enumeration value="american express"></xs:enumeration>
+                              <xs:enumeration value="master card"></xs:enumeration>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>  
+    </xs:complexType>  
+  </xs:element>  
+</xs:schema>

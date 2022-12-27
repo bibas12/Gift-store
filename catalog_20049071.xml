@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Links to the external css and xsd files -->
+<?xml-stylesheet type="text/css" href="catalog_20049071.css"?>
+<store
+xmlns="http://www.coursework.com"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="http://www.coursework.com catalog_20049071.xsd"> 
+  <!-- Sunima Rai -->
+  <logo></logo>
+  <!-- Elements to store the store details -->
+  <store_info>
+    <store_name>Doro Cards</store_name>
+    <address>12th street, manchester, london</address>
+    <contact regional_code="+477">
+      <telephone>7485859</telephone>
+      <email>dorocards@gmail.com</email>
+    </contact>
+    <online_resource resource_type="website">http://www.dorocards.com</online_resource>
+    <online_resource resource_type="social_media">http://www.facebook.com/doro_card</online_resource>
+  </store_info>
+  <!-- Elements to store the gift card details -->
+  <items>
+    <gift_cards>
+      <!-- An amazon gift card -->
+      <gift_card card_type="physical" gift_card_id="CD1314" service_provider="visa">
+        <display_contents>
+          <title>Amazon</title>
+          <description>This card can be used to make online purchase from the amazon store to buy any product or service. </description>
+          <credit_amount>500</credit_amount>
+          <stock_amount>47</stock_amount>
+          <no_of_users>1900</no_of_users>
+          <rating>5</rating>
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>505</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="digital" gift_card_id="CD1315">
+        <display_contents>
+          <!-- Title of the gift card -->
+          <title>League of Legends</title>
+          <description>This card can be used to make in game purchases in the League of Legends game.  </description>
+          <credit_amount>25</credit_amount>
+          <stock_amount>98</stock_amount>
+          <no_of_users>329</no_of_users>
+          <rating>4</rating>
+          <delivery_method>online delivery</delivery_method>
+          <refundable_status>refundable</refundable_status>
+          <cost>25.50</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="digital" gift_card_id="CD1316">
+        <display_contents>
+          <title>Google Play</title>
+          <!-- Detailed description of the card showing its use -->
+          <description>This card is used to make app purchase from the play store and also to make in-app purchase </description>
+          <credit_amount>10</credit_amount>
+          <stock_amount>49</stock_amount>
+          <no_of_users>232</no_of_users>
+          <!-- rating got by the card by the users -->
+          <rating>4</rating>
+          <delivery_method>online delivery</delivery_method>
+          <refundable_status>refundable</refundable_status>
+          <cost>12.50</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="digital" gift_card_id="CD1317">
+        <display_contents>
+          <title>Valorant</title>
+          <description>This card can be used to make in game purchases in the valorant game.</description>
+          <credit_amount>50</credit_amount>
+          <stock_amount>54</stock_amount>
+          <!-- number of users that have used this card -->
+          <no_of_users>769</no_of_users>
+          <rating>4</rating>
+          <delivery_method>online delivery</delivery_method>
+          <refundable_status>refundable</refundable_status>
+          <cost>50.50</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="physical" gift_card_id="CD1318" access="international">
+        <display_contents>
+          <title>Chedders</title>
+          <description>This gift card can be used in any of the chedders restaurant to purchase meals.</description>
+          <credit_amount>75</credit_amount>
+          <stock_amount>87</stock_amount>
+          <no_of_users>233</no_of_users>
+          <rating>3</rating>
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>75</cost>
+          <!-- Add to cart button allowing the user to purchase the card -->
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="physical" gift_card_id="CD1319" service_provider="american express">
+        <display_contents>
+          <title>Olive Garden</title>
+          <description>This gift card can be used in any of the olive garden restaurant to purchase meals.</description>
+          <!-- Amount credited by the gift card after purchase -->
+          <credit_amount>75</credit_amount>
+          <stock_amount>78</stock_amount>
+          <no_of_users>333</no_of_users>
+          <rating>4</rating>
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>78</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="physical" gift_card_id="CD1320" access="international">
+        <display_contents>
+          <title>Best Buy</title>
+          <description>This card can be used to </description>
+          <credit_amount>400</credit_amount>
+          <!-- number of remaining cards of this kind -->
+          <stock_amount>22</stock_amount>
+          <no_of_users>3242</no_of_users>
+          <rating>4</rating>
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>390</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card> 
+      <gift_card card_type="digital" gift_card_id="CD1321">
+        <display_contents>
+          <title>Itunes</title>
+          <credit_amount>50</credit_amount>
+          <stock_amount>37</stock_amount>
+          <no_of_users>2389</no_of_users>
+          <rating>3</rating>
+          <delivery_method>online delivery</delivery_method>
+          <!-- refundability information of the card -->
+          <refundable_status>refundable</refundable_status>
+          <cost>52</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card> 
+      <gift_card card_type="physical" gift_card_id="CD1322">
+        <display_contents>
+          <title>Disney</title>
+          <description>This gift card can be used on any disney authorized retail store, amusement park or restaurant</description>
+          <credit_amount>500</credit_amount>
+          <stock_amount>32</stock_amount>
+          <no_of_users>345</no_of_users>
+          <rating>5</rating>
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>52</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="digital" gift_card_id="CD1323">
+        <display_contents>
+          <title>Pubg</title>
+          <description>This gift card can be used to make in game purchases in pubg</description>
+          <credit_amount>10</credit_amount>
+          <stock_amount>233</stock_amount>
+          <no_of_users>2344</no_of_users>
+          <rating>5</rating>
+          <delivery_method>online delivery</delivery_method>
+          <refundable_status>refundable</refundable_status>
+          <!-- price to pay to purchase the card -->
+          <cost>8</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="digital" gift_card_id="CD1324">
+        <display_contents>
+          <title>Steam</title>
+          <description>This card can be used to make purchases in the steam to buy any games or purchase any steam services.</description>
+          <credit_amount>50</credit_amount>
+          <stock_amount>22</stock_amount>
+          <no_of_users>342</no_of_users>
+          <rating>4</rating>
+          <delivery_method>online delivery</delivery_method>
+          <refundable_status>refundable</refundable_status>
+          <cost>51</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card> 
+      <gift_card card_type="physical" gift_card_id="CD1325">
+        <display_contents>
+          <title>Nike</title>
+          <description>This card can be used to make purchases in any nike stores.</description>
+          <credit_amount>100</credit_amount>
+          <stock_amount>44</stock_amount>
+          <no_of_users>323</no_of_users>
+          <rating>4</rating>
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>102</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="physical" gift_card_id="CD1326">
+        <display_contents>
+          <title>Adidas</title>
+          <description>This card can be used to make purchases in any adidas stores.</description>
+          <credit_amount>100</credit_amount>
+          <stock_amount>22</stock_amount>
+          <no_of_users>848</no_of_users>
+          <rating>4</rating>
+          <!-- Method of delivery of the card to the buyer -->
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>102</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card> 
+      <gift_card card_type="physical" gift_card_id="CD1327">
+        <display_contents>
+          <title>McDonalds</title>
+          <description>This card can be used to make purchases for foods in any mc donalds restaurant.</description>
+          <credit_amount>25</credit_amount>
+          <stock_amount>465</stock_amount>
+          <no_of_users>377</no_of_users>
+          <rating>4</rating>
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>24</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card>
+      <gift_card card_type="physical" gift_card_id="CD1328">
+        <display_contents>
+          <title>Starbucks</title>
+          <description>This card can be used to make purchases for coffee drinks in any starbucks stores.</description>
+          <credit_amount>15</credit_amount>
+          <stock_amount>77</stock_amount>
+          <no_of_users>328</no_of_users>
+          <rating>4</rating>
+          <delivery_method>home delivery</delivery_method>
+          <refundable_status>non-refundable</refundable_status>
+          <cost>16</cost>
+          <add_to_cart>Add to cart</add_to_cart>
+        </display_contents>
+      </gift_card> 
+    </gift_cards>
+  </items> 
+</store>  

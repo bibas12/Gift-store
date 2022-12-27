@@ -1,0 +1,290 @@
+/* Formatting the display for the root components setting its margins and  */
+store {
+  margin: 40px 100px 100px 100px;
+  border: 3px solid blue;
+  padding: 30px 20px 30px 20px;
+  background-color: white;
+}
+
+/* updating the display for the contents of the store information */
+store_name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  color: blue;
+  font-weight: bold;
+}
+
+address, telephone, email {
+  display: block;
+}
+
+/* Adding and formatting the size, image of the logo */
+logo {
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  background-image: url("./assets/store_logo.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 80px;
+}
+
+store_info {
+  width: 300px;
+  border-bottom: 2px solid red;
+  float: right;
+  text-align: center;
+  margin-right: 100px;
+}
+
+telephone:before {
+  content: "Tel: "
+}
+
+email:before {
+  content: "Email: "
+}
+
+items {
+  font-family: sans-serif;
+  display: block;
+}
+
+/* Setting the display layout parent component of all the cards */
+gift_cards {
+  display: block;
+  margin-top: 30px;
+  border-top: 2px solid blue;
+  border-bottom: 1px solid seagreen;
+  margin-left: 100px;
+}
+
+/* Adding contents before the parent element of all the cards */
+gift_cards:before {
+  display: block;
+  content:"Gift Cards";
+  display: block;
+  text-decoration: underline;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: blue
+  /* margin-bottom: 10px; */
+}
+
+/* Adding hover effect for the card */
+gift_card:hover {
+  background-blend-mode: darken;
+  background-color: rgb(84, 12, 228);
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* Formatting the dispaly of each individual gift card */
+gift_card {
+  display: block;
+  width: 250px;
+  height: 400px;
+  background-size: cover;                      
+  background-repeat:   no-repeat;
+  background-position: center center;
+  border: 1px solid gold;
+  border-radius: 10px;
+  box-shadow: 10px 10px 6px gray;
+  margin: 10px 20px 40px 20px;
+  text-align: left;
+  font-size: 14px;
+  position: relative;
+}
+
+voucher_code {
+  display: none;
+}
+
+cost {
+  position:absolute;
+  bottom: -35px;
+  left: 0px;
+  font-size: 24px;
+  color: red ;
+}
+
+/* Adding the button to allow users to add items to the cart */
+add_to_cart {
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 110px;
+  height: 26px;
+  text-align: center;
+  position: absolute;
+  right: 130px;
+  bottom: -35px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+}
+
+/* Formatting the details for each card */
+title {
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+  font-size: 20px;
+}
+
+
+credit_amount:before {
+  content: "Gift Amount: £"
+}
+
+cost:before {
+  content: "Price: £"
+}
+
+stock_amount:before {
+  content: "Stock Left: "
+
+}
+
+no_of_users:before {
+  content: "No of Users: "
+}
+
+rating:before {
+  content: "Rating(out of 5): "
+}
+
+delivery_method:before {
+  content: "Delivery Method: ";
+}
+
+refundable_status:before {
+  content: "Refundable Status: ";
+}
+
+credit_amount, stock_amount, no_of_users, rating, description, delivery_method, refundable_status {
+  display: list-item;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+display_contents {
+  width: 400px;
+  position: absolute;
+  left: 400px;
+  bottom: 120px;
+  margin-top: 2px;
+}
+
+description:before {
+  content: "description: "
+}
+
+/* adding the appropriate images to the respective  */
+gift_card[gift_card_id="CD1314"] {
+  background-image: url("./assets/amazon_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1315"] {
+  background-image: url("./assets/league_of_legends_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1316"] {
+  background-image: url("./assets/google_play_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1317"] {
+  background-image: url("./assets/valorant_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1318"] {
+  background-image: url("./assets/cheddars_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1319"] {
+  background-image: url("./assets/olive_garden_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1320"] {
+  background-image: url("./assets/best_buy_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1321"] {
+  background-image: url("./assets/itunes_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1322"] {
+  background-image: url("./assets/disney_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1323"] {
+  background-image: url("./assets/pubg_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1324"] {
+  background-image: url("./assets/steam_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1325"] {
+  background-image: url("./assets/nike_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1326"] {
+  background-image: url("./assets/adidas_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1327"] {
+  background-image: url("./assets/mcdonalds_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+gift_card[gift_card_id="CD1328"] {
+  background-image: url("./assets/starbucks_gift_card.PNG");
+  background-size: cover;                      
+  background-repeat: no-repeat;
+  background-position: center;
+}
